@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 mb-3">Bulk Image Downloader</h1>
+      <p class="col-lg-10 fs-4">A app which let's you search and download images with just a click.</p>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form class="p-4 p-md-5 border rounded-3 bg-light" action="/results" method="POST">
+        <div class="form-floating mb-3">
+          <input type="text" name="search" class="form-control" id="floatingInput" placeholder="Download image for">
+          <label for="floatingInput">Search</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" name="limit" class="form-control" id="floatingPassword" placeholder="Limit">
+          <label for="floatingPassword">Number of Images to Download</label>
+        </div>
+        
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Download</button>
+        <hr class="my-4">
+        <p class="mt-5 mb-3 text-muted" class="text-center"></p>© Afrin Peshimam</p>
+      </form>
+    </div>
+  </div>
+{% endblock %}
